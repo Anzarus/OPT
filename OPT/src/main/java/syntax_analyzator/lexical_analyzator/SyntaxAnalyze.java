@@ -60,11 +60,11 @@ public class SyntaxAnalyze {
                     }
                 } else {
                     if (operation.getTypeOfFalseCase() == Question.ADDRESS) {
-//                        System.out.println(tabulation(counter.getTabCounter()) + "\tfalse");
+                        System.out.println(tabulation(counter.getTabCounter()) + "\tfalse");
                         return recursiveFuncForKnutTable(grammar, grammar.get(operation.getFalseCaseAddress()), data,
                                 data.getArrayOfLexems().get(counter.getLexemCounter()), arrayOfErrors, counter);
                     } else {
-//                        System.out.println(tabulation(counter.getTabCounter()) + "\tfalse");
+                        System.out.println(tabulation(counter.getTabCounter()) + "\tfalse");
                         counter.decrementTabCounter();
                         return Question.FALSE;
                     }
@@ -84,12 +84,12 @@ public class SyntaxAnalyze {
                     }
                 } else {
                     if (operation.getTypeOfFalseCase() == Question.ADDRESS) {
-//                        System.out.println(tabulation(counter.getTabCounter()) + "\tfalse");
+                        System.out.println(tabulation(counter.getTabCounter()) + "\tfalse");
                         return recursiveFuncForKnutTable(grammar, grammar.get(operation.getFalseCaseAddress()), data,
                                 data.getArrayOfLexems().get(counter.getLexemCounter()), arrayOfErrors, counter);
                     } else {
                         arrayOfErrors.add(lexem);
-//                        System.out.println(tabulation(counter.getTabCounter()) + "\tfalse");
+                        System.out.println(tabulation(counter.getTabCounter()) + "\tfalse");
                         counter.decrementTabCounter();
                         return Question.FALSE;
                     }
@@ -104,7 +104,7 @@ public class SyntaxAnalyze {
                     return Question.TRUE;
                 } else {
                     arrayOfErrors.add(lexem);
-//                    System.out.println(tabulation(counter.getTabCounter()) + "\tfalse");
+                    System.out.println(tabulation(counter.getTabCounter()) + "\tfalse");
                     counter.decrementTabCounter();
                     return Question.FALSE;
                 }
@@ -118,7 +118,7 @@ public class SyntaxAnalyze {
                     return Question.TRUE;
                 } else {
                     arrayOfErrors.add(lexem);
-//                    System.out.println(tabulation(counter.getTabCounter()) + "\tfalse");
+                    System.out.println(tabulation(counter.getTabCounter()) + "\tfalse");
                     counter.decrementTabCounter();
                     return Question.FALSE;
                 }
@@ -197,7 +197,7 @@ public class SyntaxAnalyze {
     private static String tabulation(int counter) {
         StringBuilder tab = new StringBuilder();
         for (int i = 0; i < counter; i++) {
-            tab.append("..");
+            tab.append("\t");
         }
         return tab.toString();
     }
